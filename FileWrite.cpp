@@ -12,11 +12,14 @@ int main() {
 	fileWrite();
 }
 
-void fileWrite() {
-	string input;
-	cout << "enter line to be written to file";
-	cin >> input;
-	ofstream myfile;
-	myfile.open("CellularAutomatonOutput.txt");
-	myfile << input;
+void fileWrite() { //this can be implemented into the main() in cellular_rules.cpp
+	if (writeToFile == true) {
+		//string input;
+		//cout << "Enter line to be written to file: ";
+		//cin >> input;
+		ofstream myfile;
+		myfile.open("CellularAutomatonOutput.txt");
+		myfile << array[i];
+
+	}
 }
