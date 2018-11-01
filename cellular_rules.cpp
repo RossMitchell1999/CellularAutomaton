@@ -1,6 +1,8 @@
 //Ross Mitchell
 //Cellular Automiton
 #include <iostream>
+#include <fstream>
+using namespace std;
 
 int array[31]= {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 int newLine[31] = {};
@@ -20,6 +22,15 @@ int main(int argc, char const *argv[])
 		for ( int i = 0; i < sizeof(array)/sizeof(array[0]); ++i)
 		{
 			 std::cout<<array[i];
+			 if (writeToFile == true) {
+				//string input;
+				//cout << "Enter line to be written to file: ";
+				//cin >> input;
+				ofstream myfile;
+				myfile.open("CellularAutomatonOutput.txt");
+				myfile << array[i];
+
+			}
 			 array[i]=newLine[i];
 		}
 		std::cout<<"\n";
